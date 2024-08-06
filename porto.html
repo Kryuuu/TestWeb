@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .project{
+        text-align: center;
+        align-items: center;
+        place-items: center;
+        
+    }
+    .portfolio {
+        padding: 50px 0 100px;
+        border: 1px solid #e5ebf2;
+    }
+    .portfolio-content {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Ensures content wraps properly on smaller screens */
+        gap: 30px; /* Adds spacing between items */
+    }
+    .section-heading  {
+        text-align: center;
+    }
+    .img {
+        width: 560px;
+        height: 315px; /* Menambahkan px untuk satuan */
+        text-align: auto;
+        object-fit: cover; /* Memastikan gambar sesuai ukuran tanpa distorsi */
+    }
+
+    .item img {
+        width: 100%;
+        height: 315px; /* Menyesuaikan tinggi gambar */
+        object-fit: cover; /* Memastikan gambar tetap proporsional */
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px; /* Konsistensi dengan gambar */
+    }
+</style>
+<body>
+    <header>
+        <h1>PORTOFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="porto.html">Portofolio</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="portfolio" class="portfolio">
+			<div class="portfolio-details">
+				<div class="container">
+					<div class="portfolio-content">
+						<div class="isotope">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="item">
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/EoCjTpfH5OE?si=M45j6_EtEnx5NMGl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										<div class="isotope-overlay">
+											<a href="https://youtu.be/EoCjTpfH5OE?si=mzISiwoyJx-mloCe">
+												Video Editing
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									<div class="item">
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/uMnd1VPMlRg?si=41H5T4PeO0yzbmlF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										<div class="isotope-overlay">
+											<a href="https://youtu.be/uMnd1VPMlRg?si=x3Ibolj4VXxnYZxf">
+												Video Editing
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/UegadwiWFPg?si=BTthK-tT_v6OMvtq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										<div class="isotope-overlay">
+											<a href="https://youtu.be/UegadwiWFPg?si=BTthK-tT_v6OMvtq">
+												Video Editing
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+                                <div class="col-sm-4">
+									<div class="item">
+										<img src="Screenshot 2024-08-06 130743.png" alt="">
+										<div class="isotope-overlay">
+											<a href="RawFx.mp4">
+												Video Editing
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+						</div><!--/.isotope-->
+					</div><!--/.gallery-content-->
+				</div><!--/.container-->
+			</div><!--/.portfolio-details-->
+
+		</section><!--/.portfolio-->
+    </main>
+    <footer>
+        <p>&copy; ENVY._ | 2024</p>
+    </footer>
+</body>
+</html>

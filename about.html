@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            position: relative; /* Needed to position the image inside this container */
+        }
+
+        section {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            justify-content: flex-start; /* Start from left */
+            max-width: 800px;
+            margin: 0 auto; /* Center the section horizontally */
+            position: relative;
+        }
+
+        .content {
+            max-width: 600px;
+            padding-right: 220px; /* Ensure text doesn't overlap with the image */
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tentang Saya</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="porto.html">Portofolio</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="content">
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah seorang mahasiswa di Uniska MAB dan saya juga membuka jasa <a href="porto.html">Komis video editing</a>. Saya lahir pada 25 Juli 2004 di Banjarmasin. Hobi saya adalah bermain game dan rebahan.</p>
+            </div>
+            <img src="ME.jpg" alt="Foto Profil" class="profile-image">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; ENVY._ | 2024</p>
+    </footer>
+</body>
+</html>
