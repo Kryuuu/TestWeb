@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
         }
 
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #333);
             color: #fff;
             padding: 1em 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -29,32 +32,30 @@
         }
 
         nav ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c8e6c9;
         }
 
         main {
             padding: 20px;
-            position: relative; /* Needed to position the image inside this container */
         }
 
         section {
-            display: flex;
-            align-items: flex-start; /* Align items to the top */
-            justify-content: flex-start; /* Start from left */
             max-width: 800px;
-            margin: 0 auto; /* Center the section horizontally */
+            margin: 0 auto;
             position: relative;
         }
 
-        .content {
-            max-width: 600px;
-            padding-right: 220px; /* Ensure text doesn't overlap with the image */
-        }
 
         .profile-image {
             width: 200px;
@@ -62,14 +63,117 @@
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
             position: absolute;
             top: 0;
-            right: 0;
+            right: -220px;
+            z-index: 0;
         }
 
         .profile-image:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills, .education {
+            margin-top: 40px;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #333, #66bb6a);
+            width: 0;
+            transition: width 0.7s;
+            border-radius: 10px;
+            text-align: right;
+            padding-right: 5px;
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: var(--progress-width); }
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        .education-timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #333;
+        }
+
+        .education-timeline li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 50px;
+        }
+
+        .education-timeline li:before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border: 4px solid #333;
+            border-radius: 50%;
+        }
+
+        .education-timeline li h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .education-timeline li p {
+            margin: 0;
+            color: #777;
+            font-size: 16px;
         }
 
         footer {
@@ -80,6 +184,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -97,12 +202,55 @@
     </header>
     <main>
         <section>
-            <div class="content">
+            <div >
                 <h2>Tentang Saya</h2>
                 <p>Saya adalah seorang mahasiswa di Uniska MAB dan saya juga membuka jasa <a href="porto.html">Komis video editing</a>. Saya lahir pada 25 Juli 2004 di Banjarmasin. Hobi saya adalah bermain game dan rebahan.</p>
             </div>
             <img src="ME.JPG" alt="Foto Profil" class="profile-image">
         </section>
+
+        <section class="content" class="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <div class="skill-name">After Effect</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 99%;">99%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Web Development</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 10%;">10%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Graphic Design</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;">60%</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <ul class="education-timeline">
+                <li>
+                    <h3>SMP Islam Sabilal Muhtadin</h3>
+                    <p>2017 - 2019</p>
+                </li>
+                <li>
+                    <h3>SMA Islam Sabilal Muhtadin</h3>
+                    <p>2019 - 2022</p>
+                </li>
+                <li>
+                    <h3>Universitas Islam Kalimantan (Uniska) MAB</h3>
+                    <p>2022 - Sekarang</p>
+                </li>
+            </ul>
+        </section>
+        <br>
+        <br>
+        <br>
     </main>
     <footer>
         <p>&copy; ENVY._ | 2024</p>
